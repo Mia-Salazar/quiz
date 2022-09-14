@@ -36,7 +36,7 @@ $npm run build
 
 * [React](https://es.reactjs.org/) - The web framework used
 * [SASS](https://sass-lang.com/) - CSS Preprocessor
-* [MS-DOS interface](https://github.com/vinibiavatti1/TuiCss) - CSS Framework
+* [BOOTSTRA.386](https://github.com/kristopolous/BOOTSTRA.386) - CSS Framework
 
 ## Authors
 
