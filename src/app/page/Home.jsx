@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import Time from '../components/Time';
 
 const Home = () => {
 
+
   return (
     <main>
-        
+        <Time />
     </main>
   );
 }
