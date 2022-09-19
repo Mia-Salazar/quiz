@@ -30,7 +30,7 @@ const Home = () => {
     return (
         <main>
             <Time />
-            {order && <Question number={number} question={quizQuestions[order[number]]}/>}
+            {order && number < 10 && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber}/>}
         </main>
     );
 }
