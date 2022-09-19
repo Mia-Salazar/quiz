@@ -5,19 +5,19 @@ const Question = ({number, question}) => {
         <section className="row mt-4">
             <div className="col-lg-10 mx-auto">
                 <div className="page-header">
-                    <h1 id="containers">Question #{number}</h1>
+                    <h1 id="containers">Question #{number + 1}</h1>
                 </div>
                 <div className="bs-component">
                     <div className="jumbotron">
                         <h1 className="display-3">{question.title}</h1>
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div className="btn-group btn-group-toggle" data-toggle="buttons">
                             {question.answers.map((element, index) => (
-                                <>
-                                    <label class="btn btn-primary active" for={index}>
-                                        <input type="radio" name={index} id={index} value={index} autocomplete="off" /> {element}
+                                <div className="btn btn-primary" key={index}>
+                                    <label className="btn btn-primary" htmlFor={index}>
+                                        <input type="radio" name={index} id={index} value={index} /> {element}
                                     </label>
                                     <hr className="my-4" />
-                                </>
+                                </div>
                             ))}
                         </div>
                         <p className="lead">
