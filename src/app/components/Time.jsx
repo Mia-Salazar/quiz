@@ -1,16 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const Time = () => {
-    const [second, setSecond]= useState(30);
-    useEffect(() => {
-        if (second > 0) {
-            setTimeout(function(){
-                let newSecond = second;
-                newSecond--;
-                setSecond(newSecond);
-            }, 1000);
-        }
-    }, [second]);
+const Time = ({second}) => {
 
     return (
         <article className="modal-dialog" role="document">
