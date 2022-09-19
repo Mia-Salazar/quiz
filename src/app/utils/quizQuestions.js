@@ -1,51 +1,51 @@
 export const quizQuestions = [
     {
-        title: "¿Quién fue el constructor de la  Normandía SR-2?",
+        title: "Who was the builder of the Normandy SR-2?",
         answers: ["Cerberus", "La Alianza de Sistemas", "Ciudadela", "El corredor sombrío"],
         correct: 0
     },
     {
-        title: "¿Cuándo fue la Guerra del Primer Contacto?",
+        title: "When was the First Contact War?",
         answers: ["2149", "2183", "2157", "2184"],
         correct: 2
     },
     {
-        title: "¿Quién dijo 'Los Adultos comienzan la Guerra, pero son los jovenes quienes luchan en ella'?",
+        title: "Who said: 'Older men declare war. But it is the youth that must fight and die'?",
         answers: ["Saren", "Garrus Vakarian", "Captain David Anderson", "Shepard"],
         correct: 3
     },
     {
-        title: "¿Dónde nació Tali'Zorah ?",
+        title: "Where was Tali'Zorah born?",
         answers: ["Rayya", "Normandi", "Tesleya", "Neema"],
         correct: 0
     },
     {
-        title: "¿Quién dijo 'La guerra es nuestra escultora. Y nosotros somos prisioneros de su diseño.'?",
-        answers: ["Garrus Vakarian", "Javik", "Urdnot Wrex", "El hombre ilusorio"],
+        title: "Who said: 'War is our sculptor. And we are prisoners to its design'?",
+        answers: ["Garrus Vakarian", "Javik", "Urdnot Wrex", "Illusive man"],
         correct: 1
     },
     {
-        title: "¿Cuántos años tiene Liara T'Soni?",
+        title: "How old is Liara T'Soni?",
         answers: ["104", "105", "106", "107"],
         correct: 1
     },
     {
-        title: "¿Cuántos años viven los salarianos?",
-        answers: ["hasta los 45 años", "hasta los 50 años", "hasta los 35 años", "hasta los 40 años"],
+        title: "How long do salarians live?",
+        answers: ["45 years", "50 years", "35 years", "40 years"],
         correct: 3
     },
     {
-        title: "¿Qué distrito no está en la Ciudadela?",
+        title: "Which district is not in the Citadel?",
         answers: ["Zakera", "Kithoi", "Tayseri", "Doru"],
         correct: 3
     },
     {
-        title: "¿En qué se inspiraron para crear Omega?",
+        title: "What was the inspiration for Omega?",
         answers: ["Blade Runner", "Star Wars", "Star Trek", "Los Juegos de Ender"],
         correct: 0
     },
     {
-        title: "¿De dónde proceden los Elkor?",
+        title: "Where do the Elkor come from?",
         answers: ["Feros", "Noveria", "Dekuuna", "Elatha"],
         correct: 2
     }

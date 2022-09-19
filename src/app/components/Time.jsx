@@ -9,8 +9,8 @@ const Time = ({second}) => {
                     <div className="modal-title">Modal title</div>
                 </div>
                 <div className="modal-body">
-                    <p>Tiempo restante en esta pregunta.</p>
-                    <h4 className="badge badge-dark">{second} segundos</h4>
+                    <p>Time left on this question.</p>
+                    <h4 className="badge badge-dark">{second} seconds</h4>
                 </div>
             </div>
         </article>

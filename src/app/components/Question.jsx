@@ -26,7 +26,7 @@ const Question = ({number, question, setNumber, setSecond}) => {
                         <h1 className="display-3">{question.title}</h1>
                         <div className="btn-group btn-group-toggle" data-toggle="buttons">
                             {question.answers.map((element, index) => (
-                                <Radio element={element} index={index} handleInputChange={handleInputChange}/>
+                                <Radio element={element} index={index} key={index} handleInputChange={handleInputChange}/>
                             ))}
                         </div>
                         <p className="lead">
