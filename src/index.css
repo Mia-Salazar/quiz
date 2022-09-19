@@ -12,6 +12,6 @@ code {
     monospace;
 }
 
-html, body, button {
+html, body, button, input {
   font-family: 'IBM Plex Mono', monospace !important;
 }

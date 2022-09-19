@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import Name from '../components/Name';
 import Question from '../components/Question';
 import Time from '../components/Time';
 import useCountdown from '../hooks/useCountdown';
@@ -9,6 +10,7 @@ const Home = () => {
     const [order, setOrder] = useState();
     const [number, setNumber] = useState(0);
     const {second, setSecond} = useCountdown();
+    const [data, setData] = useState({})
 
     const createArray = () => {
         const max = quizQuestions.length;
@@ -30,8 +32,9 @@ const Home = () => {
 
     return (
         <main> 
-            <Time second={second} setSecond={setSecond}/>
-            {order && number < 10 && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber} setSecond={setSecond} />}
+            {data.user && <Time second={second} setSecond={setSecond}/>}
+            {order && number < 10 && data.user && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber} setSecond={setSecond} />}
+            {!data.user && <Name setData={setData} setSecond={setSecond}/>}
         </main>
     );
 }
