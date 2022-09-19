@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import Question from '../components/Question';
 import Time from '../components/Time';
+import useCountdown from '../hooks/useCountdown';
 import { quizQuestions } from '../utils/quizQuestions';
-
 
 const Home = () => {
     const [order, setOrder] = useState();
     const [number, setNumber] = useState(0);
+    const {second, setSecond} = useCountdown();
 
     const createArray = () => {
         const max = quizQuestions.length;
@@ -28,9 +29,9 @@ const Home = () => {
     }, []);
 
     return (
-        <main>
-            <Time />
-            {order && number < 10 && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber}/>}
+        <main> 
+            <Time second={second} setSecond={setSecond}/>
+            {order && number < 10 && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber} setSecond={setSecond} />}
         </main>
     );
 }
