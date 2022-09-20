@@ -2,19 +2,35 @@ import React, { useState } from 'react';
 
 import Container from './Container';
 import Radio from './Radio';
+import { quizQuestions } from '../utils/quizQuestions';
 
-const Question = ({number, question, setNumber, setSecond}) => {
+const Question = ({number, question, setNumber, setSecond, second, setData, data, order }) => {
     const [input, setInput] = useState("");
     const handleSubmit = (event) => {
         event.preventDefault();
+        getScoring();
+    }
+    const handleInputChange = (event) => {
+        setInput(Number(event.target.value));
+    }
+    const getScoring = () => {
+        let score = data.score + second;
+        let newMistakes = quizQuestions[order[number]].correct !== input ? ++data.mistakes : data.mistakes;
+        let newSuccess = quizQuestions[order[number]].correct === input ? ++data.success : data.success;
+        console.log(quizQuestions[order[number]].correct, input, 'inpuuuuuuut')
+        console.log(data, newMistakes, newSuccess)
+        setData(prevState => ({
+            ...prevState,
+            mistakes: newMistakes,
+            success: newSuccess,
+            score: score
+        }));
         let newPage = number;
         newPage++;
         setNumber(newPage);
         setSecond(30);
     }
-    const handleInputChange = (event) => {
-        setInput(event.target.value);
-    }
+
     return (
         <>
             <Container>

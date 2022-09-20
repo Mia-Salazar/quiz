@@ -8,7 +8,7 @@ const useInitialState = () => {
   const changeQuiz = payload => {
     setState({
       ...state,
-      state: {...state, payload},
+      ranking: [...state.ranking, payload],
     });
   }
 

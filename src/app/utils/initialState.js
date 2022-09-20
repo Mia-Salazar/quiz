@@ -1,6 +1,6 @@
 export default {
-    ranking: []
-
+    ranking: [
+    ],
 };
 
 // user: "",
