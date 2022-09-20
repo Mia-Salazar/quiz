@@ -17,8 +17,6 @@ const Question = ({number, question, setNumber, setSecond, second, setData, data
         let score = data.score + second;
         let newMistakes = quizQuestions[order[number]].correct !== input ? ++data.mistakes : data.mistakes;
         let newSuccess = quizQuestions[order[number]].correct === input ? ++data.success : data.success;
-        console.log(quizQuestions[order[number]].correct, input, 'inpuuuuuuut')
-        console.log(data, newMistakes, newSuccess)
         setData(prevState => ({
             ...prevState,
             mistakes: newMistakes,
