@@ -10,7 +10,7 @@ const Home = () => {
     const [order, setOrder] = useState();
     const [number, setNumber] = useState(0);
     const {second, setSecond} = useCountdown();
-    const [data, setData] = useState({})
+    const [data, setData] = useState({});
 
     const createArray = () => {
         const max = quizQuestions.length;
@@ -24,6 +24,10 @@ const Home = () => {
             }
         }
         setOrder(random);
+        setData(prevState => ({
+            ...prevState,
+            order : random,
+        }));
     }
 
     useEffect(() => {
@@ -33,7 +37,8 @@ const Home = () => {
     return (
         <main> 
             {data.user && <Time second={second} setSecond={setSecond}/>}
-            {order && number < 10 && data.user && <Question number={number} question={quizQuestions[order[number]]} setNumber={setNumber} setSecond={setSecond} />}
+            {order && number < 10 && data.user 
+            && <Question number={number} question={quizQuestions[order[number]]} setData={setData} order={order} data={data} setNumber={setNumber} setSecond={setSecond} setData={setData} second={second} />}
             {!data.user && <Name setData={setData} setSecond={setSecond}/>}
         </main>
     );

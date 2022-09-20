@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.scss';
@@ -12,9 +13,9 @@ function App() {
     <AppContext.Provider value={initialState}>
       <BrowserRouter>
         <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
       </BrowserRouter>
     </AppContext.Provider>
 
