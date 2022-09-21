@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Container from './Container';
@@ -18,26 +18,33 @@ const Question = ({number, question, setNumber, setSecond, second, setData, data
     const handleInputChange = (event) => {
         setInput(Number(event.target.value));
     }
-    const getNextStep = () => {
+    const getNextStep = (empty = false) => {
         let newScoreUpdate = quizQuestions[order[number]].correct === input ? data.score + second : data.score;
         let newMistakes = quizQuestions[order[number]].correct !== input ? ++data.mistakes : data.mistakes;
         let newSuccess = quizQuestions[order[number]].correct === input ? ++data.success : data.success;
+        let newAnswers = !empty ? [...data.answers, input] : [...data.answers, ""]
         setData(prevState => ({
             ...prevState,
             mistakes: newMistakes,
             success: newSuccess,
             score: newScoreUpdate,
-            answers: [...data.answers, input]
+            answers: newAnswers
         }));
         setNumber(++number);
         setSecond(30);
         if(number >= 10) {
-            const lastOne = {...data, answers: [...data.answers, input]}
+            const lastOne = {...data, answers: newAnswers}
             addNewScore(lastOne);
             navigate(`/score/${data.id}`);
         }
-        console.log(data, 'useffect')
     }
+
+    useEffect(() => {
+        if(second === 0) {
+            getNextStep(true);
+        }
+
+    }, [second])
 
     return (
         <>
