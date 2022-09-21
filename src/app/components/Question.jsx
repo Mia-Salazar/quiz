@@ -35,7 +35,7 @@ const Question = ({number, question, setNumber, setSecond, second, setData, data
         if(number >= 10) {
             const lastOne = {...data, answers: newAnswers}
             addNewScore(lastOne);
-            navigate(`/score/${data.id}`);
+            navigate(`/ranking/${data.id}`);
         }
     }
 
