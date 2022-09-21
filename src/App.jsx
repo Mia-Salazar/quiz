@@ -7,6 +7,7 @@ import AppContext from './app/context/AppContext';
 import useInitialState from './app/hooks/useInitialState';
 import Home from './app/page/Home';
 import FinalScore from './app/page/FinalScore';
+import Ranking from './app/page/Ranking';
 
 function App() {
   const initialState = useInitialState();
@@ -16,7 +17,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/score/:id' element={<FinalScore />} />
+          <Route path='/ranking' element={<Ranking />} />
+          <Route path='/ranking/:id' element={<FinalScore />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>
