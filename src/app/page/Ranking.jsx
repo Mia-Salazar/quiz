@@ -16,7 +16,7 @@ const Ranking = () => {
             return 0;
     }
     const rankingOrdered = state.ranking.sort(orderElements);
-    console.log(rankingOrdered, 'order')
+
 
     return (
         <Container>
