@@ -5,7 +5,7 @@ import initialState from '../utils/initialState';
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
-  const changeQuiz = payload => {
+  const addNewScore = payload => {
     setState({
       ...state,
       ranking: [...state.ranking, payload],
@@ -13,7 +13,7 @@ const useInitialState = () => {
   }
 
   return {
-    changeQuiz,
+    addNewScore,
     state,
   };
 };

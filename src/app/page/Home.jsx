@@ -36,9 +36,9 @@ const Home = () => {
 
     return (
         <main> 
-            {data.user && <Time second={second} setSecond={setSecond}/>}
+            {data.user && number < 10 && <Time second={second} setSecond={setSecond}/>}
             {order && number < 10 && data.user 
-            && <Question number={number} question={quizQuestions[order[number]]} setData={setData} order={order} data={data} setNumber={setNumber} setSecond={setSecond} setData={setData} second={second} />}
+            && <Question number={number} question={quizQuestions[order[number]]} setData={setData} order={order} data={data} setNumber={setNumber} setSecond={setSecond} second={second} />}
             {!data.user && <Name setData={setData} setSecond={setSecond}/>}
         </main>
     );

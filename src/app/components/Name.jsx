@@ -33,9 +33,7 @@ const Name = ({setData, setSecond}) => {
                         <label htmlFor="name">Name</label>
                         <input type="text" className="form-control" id="name" placeholder="Write your name" required onChange={handleInputChange}/>
                     </div>
-                    <p className="lead">
-                        <button className="btn btn-primary btn-lg" type="submit">Next</button>
-                    </p>
+                    <button className="btn btn-primary btn-lg" type="submit">Next</button>
                 </div>
             </form>
         </Container>
