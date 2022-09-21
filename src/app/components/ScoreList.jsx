@@ -3,7 +3,6 @@ import React from 'react';
 import { quizQuestions } from '../utils/quizQuestions';
 
 const ScoreList = ({score, order}) => {
-    console.log(score, 'aa')
     return (
         <div className="bs-component">
             <div className="jumbotron">
@@ -31,7 +30,8 @@ const ScoreList = ({score, order}) => {
                         <li className="list-group-item d-flex justify-content-between align-items-center" key={index}>
                             {index + 1}- {quizQuestions[order[index]].title}
                             <span className="badge badge-primary badge-pill">
-                                {quizQuestions[order[index]].answers[element]}
+                                {quizQuestions[order[index]].answers[element] === "" && ""}
+                                {quizQuestions[order[index]].answers[element] !== "" && quizQuestions[order[index]].answers[element]}
                             </span>
                         </li>
                     ))}
