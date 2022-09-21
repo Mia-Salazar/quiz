@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Container from './Container';
@@ -32,10 +32,11 @@ const Question = ({number, question, setNumber, setSecond, second, setData, data
         setNumber(++number);
         setSecond(30);
         if(number >= 10) {
-            addNewScore(data);
+            const lastOne = {...data, answers: [...data.answers, input]}
+            addNewScore(lastOne);
             navigate(`/score/${data.id}`);
         }
-        //console.log(number, data, 'useffect')
+        console.log(data, 'useffect')
     }
 
     return (
